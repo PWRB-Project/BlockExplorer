@@ -38,11 +38,11 @@ RUN go get github.com/gobuffalo/packr/...
 
 # download pre-loaded depencencies
 RUN \
-    cleanup() { rm -rf $GOPATH/src/blockbook; } && \
+    cleanup() { rm -rf $GOPATH/src/BlockExplorer; } && \
     trap cleanup EXIT && \
     cd $GOPATH/src && \
-    git clone https://github.com/trezor/blockbook.git && \
-    cd blockbook && \
+    git clone https://github.com/PWRB-Project/BlockExplorer.git && \
+    cd BlockExplorer && \
     dep ensure -vendor-only && \
     cp -r vendor /build/vendor
 
