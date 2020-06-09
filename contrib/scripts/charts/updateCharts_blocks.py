@@ -17,10 +17,10 @@ isTestnet = True
 rpc_user = "rpc"
 rpc_pass = "pwrbrpc"
 rpc_host = "127.0.0.1"
-rpc_port = "18049" if isTestnet else "8049"
+rpc_port = "8049" if isTestnet else "8049"
 rpc_url = "http://%s:%s@%s" % (rpc_user, rpc_pass, rpc_host)
 bb_url = "https://testnet" if isTestnet else "https://explorer"
-bb_url += ".pwrb.link"
+bb_url += ".powerbalt.com"
 
 # FILENAME
 supply_data_file = os.path.join("/opt/coins/blockbook/plot_data", "supply_data.json")
