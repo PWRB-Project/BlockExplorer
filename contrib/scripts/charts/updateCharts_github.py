@@ -16,7 +16,7 @@ class GithubClient:
         self.url = "https://api.github.com"
 
     def checkResponse(self, repo, method, param=""):
-        url = self.url + "/repos/PIVX-Project/%s/%s" % (repo, method)
+        url = self.url + "/repos/PWRB-Project/%s/%s" % (repo, method)
         if param != "":
             url += "/%s" % param
         resp = requests.get(url, data={}, verify=True)
@@ -25,10 +25,10 @@ class GithubClient:
             return data
         raise Exception("Invalid response: %s" % str(resp))
 
-    def getContributors(self, repo='PIVX'):
+    def getContributors(self, repo='PWRB'):
         return self.checkResponse(repo, "stats/contributors")
 
-    def getPulls(self, sorting='created', repo='PIVX'):
+    def getPulls(self, sorting='created', repo='PWRB'):
         pulls = []
         try:
             i = 1
@@ -46,7 +46,7 @@ class GithubClient:
         return pulls
 
 
-    def getWeeklyCommits(self, repo='PIVX'):
+    def getWeeklyCommits(self, repo='PWRB'):
         return self.checkResponse(repo, "stats/commit_activity")
 
 
@@ -54,7 +54,7 @@ class GithubClient:
 class GeckoClient:
 
     def __init__(self):
-        self.url = "https://api.coingecko.com/api/v3/coins/pivx"
+        self.url = "https://api.coingecko.com/api/v3/coins/pwrb"
 
     def checkResponse(self, method, param=""):
         url = self.url + "/%s" % method

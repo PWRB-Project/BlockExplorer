@@ -23,6 +23,7 @@ import (
 	"blockbook/bchain/coins/namecoin"
 	"blockbook/bchain/coins/nuls"
 	"blockbook/bchain/coins/pivx"
+	"blockbook/bchain/coins/pwrb"
 	"blockbook/bchain/coins/polis"
 	"blockbook/bchain/coins/qtum"
 	"blockbook/bchain/coins/ravencoin"
@@ -79,6 +80,7 @@ func init() {
 	BlockChainFactories["Groestlcoin"] = grs.NewGroestlcoinRPC
 	BlockChainFactories["Groestlcoin Testnet"] = grs.NewGroestlcoinRPC
 	BlockChainFactories["PIVX"] = pivx.NewPivXRPC
+	BlockChainFactories["PWRB"] = pwrb.NewPwrBRPC
 	BlockChainFactories["PIVX Testnet"] = pivx.NewPivXRPC
 	BlockChainFactories["Polis"] = polis.NewPolisRPC
 	BlockChainFactories["Zcoin"] = xzc.NewZcoinRPC

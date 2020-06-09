@@ -15,12 +15,12 @@ isTestnet = True
 
 # RPC CREDS
 rpc_user = "rpc"
-rpc_pass = "pivxrpc"
+rpc_pass = "pwrbrpc"
 rpc_host = "127.0.0.1"
 rpc_port = "18049" if isTestnet else "8049"
 rpc_url = "http://%s:%s@%s" % (rpc_user, rpc_pass, rpc_host)
 bb_url = "https://testnet" if isTestnet else "https://explorer"
-bb_url += ".pivx.link"
+bb_url += ".pwrb.link"
 
 # FILENAME
 supply_data_file = os.path.join("/opt/coins/blockbook/plot_data", "supply_data.json")
@@ -84,7 +84,7 @@ except FileNotFoundError:
         print("No cache files found. Closing")
         raise e
     # delete cache
-    del supply_data["pivSupply"]
+    del supply_data["pwrbSupply"]
     os.remove(supply_data_file_cache)
     os.remove(network_data_file_cache)
 
@@ -96,7 +96,7 @@ if (
 ):
     # remove 3 datapoints to be extra safe
     supply_data["lastBlockHash"] = last_block_hash
-    for data_key in ["zpivSupply", "zpivMints"]:
+    for data_key in ["zpwrbSupply", "zpwrbMints"]:
         for denom_key in supply_data[data_key]:
             supply_data[data_key][denom_key] = supply_data[data_key][denom_key][:-3]
     for data_key in ["blocks_axis", "time_axis"]:
@@ -126,16 +126,16 @@ while supply_data["blocks_axis"][-1] + 100 <= blockCount:
     # fetch blockindexstats over 100 blocks: [N, N+99]
     block_stats = conn.getblockindexstats(new_block_num-100, 100)
 
-    # get mints - zpiv supply
+    # get mints - zpwrb supply
     spends = {}
     for k in ZC_DENOMS:
         # mints always zero after cache
-        supply_data["zpivMints"]["denom_%d" % k].append(0)
+        supply_data["zpwrbMints"]["denom_%d" % k].append(0)
         # get spends in range
         spends["denom_%d" % k] = int(block_stats["spendcount"]["denom_%d" % k]) + int(block_stats["publicspendcount"]["denom_%d" % k])
         # calculate supply
-        new_zpiv_supply = (supply_data["zpivMints"]["denom_%d" % k][-1] - spends["denom_%d" % k]) * k
-        supply_data["zpivSupply"]["denom_%d" % k].append(supply_data["zpivSupply"]["denom_%d" % k][-1] + new_zpiv_supply)
+        new_zpwrb_supply = (supply_data["zpwrbMints"]["denom_%d" % k][-1] - spends["denom_%d" % k]) * k
+        supply_data["zpwrbSupply"]["denom_%d" % k].append(supply_data["zpwrbSupply"]["denom_%d" % k][-1] + new_zpwrb_supply)
 
 
     # get tx count and fees

@@ -129,7 +129,7 @@ type BlockInfo struct {
 	Difficulty json.Number `json:"difficulty"`
 	Txids      []string    `json:"tx,omitempty"`
     MoneySupply   json.Number `json:"moneysupply"`
-    ZerocoinSupply  ZCdenoms    `json:"zPIVsupply"`
+    ZerocoinSupply  ZCdenoms    `json:"zPWRBsupply"`
 }
 
 // MempoolEntry is used to get data about mempool entry
@@ -164,7 +164,7 @@ type ChainInfo struct {
 	Timeoffset      float64 `json:"timeoffset"`
 	Warnings        string  `json:"warnings"`
     MoneySupply   json.Number `json:"moneysupply"`
-    ZerocoinSupply  ZCdenoms    `json:"zPIVsupply"`
+    ZerocoinSupply  ZCdenoms    `json:"zPWRBsupply"`
     MasternodeCount int `json:"masternodecount"`
     NextSuperBlock int `json:"masternodecount"`
 }

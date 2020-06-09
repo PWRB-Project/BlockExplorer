@@ -268,15 +268,15 @@ function InitBlockSizeChart() {
 }
 
 function InitFeeChart() {
-    let legend1 = 'Avg. Fee per byte (PIV)';
-    let legend2 = 'TOT Burnt Fees (PIV)'
+    let legend1 = 'Avg. Fee per byte (PWRB)';
+    let legend2 = 'TOT Burnt Fees (PWRB)'
     feeChart = InitLineChart(fee_ctx, [legend1, legend2]);
     feeChart.options.tooltips.callbacks.title = tooltipTitle;
     feeChart.data.labelset = "blocks"
     feeChart.data.datasets = [
         {
             data: [],
-            label: "avg. PIV/byte fee",
+            label: "avg. PWRB/byte fee",
             borderColor: "rgba(244, 66, 83, 0.8)",
             pointRadius: 2,
             needsRadius: 2,   // for resize,

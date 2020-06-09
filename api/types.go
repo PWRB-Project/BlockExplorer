@@ -308,7 +308,7 @@ type BlockInfo struct {
 	Difficulty    string      `json:"difficulty"`
 	Txids         []string    `json:"tx,omitempty"`
     MoneySupply   json.Number `json:"moneysupply,omitempty"`
-    ZerocoinSupply  bchain.ZCdenoms    `json:"zPIVsupply,omitempty"`
+    ZerocoinSupply  bchain.ZCdenoms    `json:"zPWRBsupply,omitempty"`
 }
 
 // Block contains information about block
@@ -355,7 +355,7 @@ type BackendInfo struct {
 	Timeoffset      float64 `json:"timeOffset"`
 	Warnings        string  `json:"warnings"`
     MoneySupply   json.Number `json:"moneysupply"`
-    ZerocoinSupply  bchain.ZCdenoms    `json:"zPIVsupply"`
+    ZerocoinSupply  bchain.ZCdenoms    `json:"zPWRBsupply"`
     MasternodeCount int `json:"masternodecount"`
     NextSuperBlock int `json:"masternodecount"`
 }

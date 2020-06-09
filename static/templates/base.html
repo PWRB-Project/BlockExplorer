@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/static/css/main.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="{{.CoinName}} Explorer">
-    <meta property="og:image" content="https://pivx.org/wp-content/uploads/2017/01/PIVX_illustrated_white.png" />
+    <meta property="og:image" content="https://www.powerbalt.com/wp-content/uploads/2020/04/logo.png" />
     {{- if .IsCharts -}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <script src="/static/js/charts.js"></script>
@@ -25,12 +25,12 @@
             <nav class="navbar navbar-expand navbar-dark bg-trezor">
                 <a class="navbar-brand d-none d-sm-flex" href="/" title="Home">
                     <div alt="Logo" class="trezor-logo-svg-white">
-                        <img src="/static/pivx.png" height="42" />
+                        <img src="/static/pwrb.png" height="42" />
                     </div>
                 </a>
                 <a class="navbar-brand d-block d-sm-none" href="/" title="Home">
                     <div alt="Logo-sm" class="trezor-logo-svg-white">
-                        <img src="/static/pivx-sm.png" height="42" />
+                        <img src="/static/pwrb-sm.png" height="42" />
                     </div>
                 </a>
                 {{- if not .IsIndex -}}
@@ -49,7 +49,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Charts</a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="/charts/supply">zPIV supply</a>
+                          <a class="dropdown-item" href="/charts/supply">zPWRB supply</a>
                           <a class="dropdown-item" href="/charts/network">Network stats</a>
                           <a class="dropdown-item" href="/charts/github">GitHub activity</a>
                         </div>
@@ -65,7 +65,7 @@
                 {{- end -}}
                 <ul class="navbar-nav flex-row ml-md-auto d-none d-lg-flex ">
                     <li class="nav-item">
-                        <a href="https://pivx.org/" class="nav-link" target="_blank">PIVX.org</a>
+                        <a href="https://www.powerbalt.com/" class="nav-link" target="_blank">PowerBalt.com</a>
                     </li>
                     <li class="nav-item">
                         <a href="/status" class="nav-link">&#9432;</a>
