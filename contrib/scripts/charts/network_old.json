@@ -1,1 +1,1 @@
-{"blocks_axis": [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500], "time_axis": [1591623000], "txs": [0], "blocksize": [0], "difficulty": [0.0], "fees_perKb": [0], "blocktime": [0], "fees_ttl": [0]}
+{"blocks_axis": [0, 100, 200], "time_axis": [1591623000,1591623000,1591623000], "txs": [0], "blocksize": [0], "difficulty": [0.0], "fees_perKb": [0], "blocktime": [0], "fees_ttl": [0]}
