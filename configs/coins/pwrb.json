@@ -22,10 +22,10 @@
     "package_name": "backend-pwrb",
     "package_revision": "satoshilabs-1",
     "system_user": "pwrb",
-    "version": "1.0.7",
-    "binary_url": "https://github.com/PWRB-Project/PWRB/releases/download/v1.0.7/pwrb-1.0.7-x86_64-linux-gnu.tar.gz",
+    "version": "1.0.8",
+    "binary_url": "https://github.com/PWRB-Project/PWRB/releases/download/v1.0.8/pwrb-1.0.8-x86_64-linux-gnu.tar.gz",
     "verification_type": "sha256",
-    "verification_source": "177f9d0279262c1c5dfc853c38988e44f160a3d8eaab82d16e1cd2805c28c712",
+    "verification_source": "ff2f327122261de63dbaac352dec1c830399599d830e270a2caf5c41cc424aba",
     "extract_command": "tar -C backend --strip 1 -xf",
     "exclude_files": [
       "bin/pwrb-qt"
